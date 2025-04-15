@@ -1,213 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>SONEEYA S S | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Soneeya S S - Portfolio</title>
   <style>
-    :root {
-      --primary-color: #007acc;
-      --bg-light: #f8f9fa;
-      --text-dark: #333;
-      --bg-dark: #121212;
-      --text-light: #f1f1f1;
-      --card-bg-dark: #1e1e1e;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 20px;
-      background-color: var(--bg-light);
-      color: var(--text-dark);
-      animation: fadeIn 1s ease-in;
-      transition: background-color 0.3s, color 0.3s;
+      padding: 2rem;
+      background-color: #f8f9fa;
+      color: #333;
     }
-
-    body.dark-mode {
-      background-color: var(--bg-dark);
-      color: var(--text-light);
+    h1, h2, h3 {
+      color: #2c3e50;
     }
-
-    header {
-      text-align: center;
-      padding: 30px 10px;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-
-    p.tagline {
-      font-size: 1.2rem;
-      color: #555;
-      animation: slideIn 1s ease;
-    }
-
-    section {
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 20px;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: transform 0.3s, background 0.3s;
-    }
-
-    body.dark-mode section {
-      background: var(--card-bg-dark);
-    }
-
-    section:hover {
-      transform: scale(1.02);
-    }
-
-    h2 {
-      border-bottom: 2px solid var(--primary-color);
-      padding-bottom: 5px;
-      color: var(--primary-color);
-    }
-
-    ul.skills {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    ul.skills li {
-      background: var(--primary-color);
-      color: white;
-      padding: 8px 12px;
-      border-radius: 20px;
-      font-size: 0.9rem;
-      transition: background 0.3s;
-    }
-
-    ul.skills li:hover {
-      background: #005a99;
-    }
-
-    .project {
-      margin-bottom: 20px;
-    }
-
-    .project a {
-      color: var(--primary-color);
+    a {
+      color: #0077b6;
       text-decoration: none;
     }
-
-    .project a:hover {
-      text-decoration: underline;
+    .section {
+      margin-bottom: 2rem;
     }
-
-    .contact a {
-      display: block;
-      margin: 5px 0;
-      color: var(--primary-color);
-      text-decoration: none;
+    .section ul {
+      padding-left: 1.2rem;
     }
-
-    .contact a:hover {
-      text-decoration: underline;
+    .contact {
+      margin-bottom: 2rem;
     }
-
-    .buttons {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin-top: 15px;
-      flex-wrap: wrap;
-    }
-
-    .button {
-      background-color: var(--primary-color);
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 20px;
-      text-decoration: none;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .button:hover {
-      background-color: #005a99;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to   { opacity: 1; }
-    }
-
-    @keyframes slideIn {
-      from { transform: translateY(20px); opacity: 0; }
-      to   { transform: translateY(0); opacity: 1; }
-    }
-
-    @media (max-width: 768px) {
-      h1 { font-size: 2rem; }
-      section { padding: 15px; margin: 20px 10px; }
-      ul.skills li { font-size: 0.8rem; padding: 6px 10px; }
+    .highlight {
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>SONEEYA S S</h1>
-    <p class="tagline">Aspiring DevOps Engineer & Cloud Enthusiast</p>
-    <div class="buttons">
-      <a class="button" href="resume.pdf" download>Download Resume</a>
-      <button class="button" onclick="toggleDarkMode()">Toggle Dark Mode</button>
-    </div>
+    <h1>Soneeya S S</h1>
+    <p class="contact">
+      Marathahalli, Bangalore, Karnataka - 560037<br>
+      📞 9677857669<br>
+      📧 <a href="mailto:soneeyasubramanian@gmail.com">soneeyasubramanian@gmail.com</a><br>
+      🔗 <a href="https://www.linkedin.com/in/soneeya-s-s-951575274/">LinkedIn</a>
+    </p>
   </header>
 
-  <section>
-    <h2>About Me</h2>
-    <p>I am currently learning and exploring DevOps, cloud infrastructure, and automation tools. I enjoy building and deploying projects using modern technologies like Kubernetes, Terraform, Jenkins, and AWS.</p>
+  <section class="section">
+    <h2>Professional Summary</h2>
+    <p>Aspiring DevOps Engineer with experience in AWS, Linux, and automation. Strong understanding of cloud infrastructure and DevOps practices. Passionate about system reliability and scalable deployments.</p>
   </section>
 
-  <section>
-    <h2>Skills</h2>
-    <ul class="skills">
-      <li>HTML</li><li>CSS</li><li>AWS</li><li>Linux</li><li>CCNA</li>
-      <li>Python</li><li>C</li><li>DevOps</li><li>GitHub</li><li>Docker</li>
-      <li>Jenkins</li><li>Maven</li><li>Ansible</li><li>Terraform</li><li>Kubernetes</li>
-      <li>Grafana</li><li>Prometheus</li>
+  <section class="section">
+    <h2>Education</h2>
+    <ul>
+      <li><span class="highlight">Bannari Amman Institute of Technology (2021 – 2025)</span> - B.Tech in IT, CGPA: 7.91</li>
+      <li><span class="highlight">SPK Matric Higher Secondary School (2021)</span> - HSC II Year, 86.6%</li>
+      <li><span class="highlight">SPK Matric Higher Secondary School (2019)</span> - SSLC, 85.6%</li>
     </ul>
   </section>
 
-  <section>
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Static Website Hosting</h3>
-      <p>Deployed a personal static site using GitHub Pages.</p>
-      <a href="https://github.com/soneeya-it21/my-static-site" target="_blank">View on GitHub</a>
-    </div>
+  <section class="section">
+    <h2>Technical Skills</h2>
+    <ul>
+      <li><strong>Languages:</strong> Shell Scripting, Python, C, HTML/CSS</li>
+      <li><strong>Tools:</strong> AWS, VS Code, GitHub</li>
+      <li><strong>Frameworks & Tech:</strong> Linux, Jenkins, Ansible, Maven, Docker, Kubernetes, Terraform, Grafana, Prometheus</li>
+      <li><strong>Database:</strong> MySQL</li>
+    </ul>
   </section>
 
-  <section class="contact">
-  <h2>Contact</h2>
-  <ul style="list-style: none; padding-left: 0;">
-    <li><strong>Email:</strong> <a href="mailto:soneeya.it21@bitsathy.ac.in">soneeya.it21@bitsathy.ac.in</a></li>
-    <li><strong>GitHub:</strong> <a href="https://github.com/soneeya-it21">github.com/soneeya-it21</a></li>
-    <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/soneeya-s-s-951575274/">linkedin.com/in/soneeya-s-s</a></li>
-  </ul>
-</section>
+  <section class="section">
+    <h2>Projects</h2>
+    <ul>
+      <li><strong>Email / SMS Spam Detection</strong> – Python, NLP, TensorFlow, Scikit-learn</li>
+      <li><strong>Intrusion Detection</strong> – Machine Learning & Deep Learning using MATLAB, Java</li>
+      <li><strong>Student TC Management Portal</strong> – React.js, Firebase, JS, Crypto.js</li>
+      <li><strong>Financial Indicator Tool</strong> – Python, AWS EC2, Scikit-learn, Alpaca API</li>
+    </ul>
+  </section>
 
-  <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle("dark-mode");
-    }
-  </script>
+  <section class="section">
+    <h2>Experience</h2>
+    <ul>
+      <li><strong>DevOps Intern - Elevate Labs</strong> (April 2025 - Present) – Hands-on with CI/CD, AWS, Automation</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>Certifications & Publications</h2>
+    <ul>
+      <li>SQL Internship - Edify Techno Solutions</li>
+      <li>CSS3 & Python (Infosys Springboard)</li>
+      <li>Cloud Computing - Besant Technologies</li>
+      <li><a href="https://zenodo.org/records/12770747" target="_blank">AI for Workload Management - IJRTI</a></li>
+      <li><a href="https://www.ijfmr.com/research-paper.php?id=24989" target="_blank">Resource Scheduling in Cloud Healthcare - IJFMR</a></li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>Leadership & Extracurriculars</h2>
+    <ul>
+      <li>Basketball - SGFI Player, School Games Federation of India</li>
+      <li>Football - Main player, Anna University Women’s Football Team</li>
+    </ul>
+  </section>
 
 </body>
 </html>
