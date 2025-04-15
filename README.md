@@ -17,54 +17,14 @@ This project demonstrates how to deploy a simple static website using **GitHub P
 Follow the steps below to host a static website using GitHub Pages:
 
 1. Create index.html file
-The main HTML file (`index.html`) is the entry point of your website. Below is the structure of the portfolio used for this project:
+The main HTML file (`index.html`) is the entry point of your website. The structured code for the portfolio is uploaded in the Repo.
 
-## html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Soneeya S S - Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <style>
-    /* Custom CSS for styling the portfolio */
-    :root {
-      --bg-light: #f4f6f9;
-      --bg-dark: #1e1e2f;
-      --text-light: #333;
-      --text-dark: #f1f1f1;
-      --accent: #0077b6;
-    }
-
-    /* Additional styles here... */
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Soneeya S S</h1>
-    <p>Contact: soneeyasubramanian@gmail.com</p>
-  </header>
-
-  <section class="section">
-    <h2>Professional Summary</h2>
-    <p>Aspiring DevOps Engineer with expertise in cloud infrastructure, AWS, and automation.</p>
-  </section>
-
-  <!-- More sections as required -->
-
-  <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark-mode');
-    }
-  </script>
-</body>
-</html>
+✅ Output (Light and Dark Theme)
+![Portfolio](https://github.com/user-attachments/assets/6bf27a4c-646c-4e5a-bcba-8871a4717131)
+![Portfolio light theme](https://github.com/user-attachments/assets/f477a8a6-d20f-40b9-bda7-ca478af01303)
 
 2. Push to GitHub Repository
 Create a new repository on GitHub.
-
 Push the index.html file (and any additional files such as CSS if required) to the repository.
 
 3. Enable GitHub Pages
@@ -79,9 +39,7 @@ Push the index.html file (and any additional files such as CSS if required) to t
 
 5. Access Live Website
 Once GitHub Pages has deployed the site (usually within a few minutes), you will receive a live URL link to access the website.
-
-Example:
-https://<your-github-username>.github.io/<repository-name>/
+https://soneeya-it21.github.io/my-static-site/
 
 6. Customization with CSS
 You can modify the index.html file and the CSS to match your branding, including changes to fonts, colors, layouts, and more. To switch to dark mode, the portfolio includes a button to toggle between light and dark modes.
