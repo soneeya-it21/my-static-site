@@ -2,71 +2,149 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Soneeya S S - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    * {
       margin: 0;
-      padding: 2rem;
-      background-color: #f8f9fa;
-      color: #333;
+      padding: 0;
+      box-sizing: border-box;
     }
-    h1, h2, h3 {
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to right, #f8f9fa, #e9ecef);
+      color: #333;
+      padding: 2rem;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
       color: #2c3e50;
     }
-    a {
+
+    .contact a {
+      display: block;
       color: #0077b6;
       text-decoration: none;
+      margin-top: 0.3rem;
     }
+
     .section {
-      margin-bottom: 2rem;
+      margin-bottom: 2.5rem;
+      animation: slideUp 1s ease forwards;
     }
+
+    .section h2 {
+      border-left: 5px solid #0077b6;
+      padding-left: 1rem;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      color: #212529;
+    }
+
     .section ul {
-      padding-left: 1.2rem;
+      list-style-type: none;
+      padding-left: 0;
     }
-    .contact {
-      margin-bottom: 2rem;
+
+    .section ul li {
+      margin-bottom: 0.7rem;
+      background: #fff;
+      padding: 0.8rem 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     }
+
     .highlight {
-      font-weight: bold;
+      font-weight: 600;
+    }
+
+    .badge {
+      display: inline-block;
+      background-color: #0077b6;
+      color: white;
+      padding: 0.3rem 0.6rem;
+      margin: 0.2rem;
+      border-radius: 0.5rem;
+      font-size: 0.8rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 1rem;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+      .section h2 {
+        font-size: 1.3rem;
+      }
     }
   </style>
 </head>
 <body>
-
   <header>
     <h1>Soneeya S S</h1>
     <p class="contact">
-      Marathahalli, Bangalore, Karnataka - 560037<br>
+      📍 Marathahalli, Bangalore, Karnataka<br>
       📞 9677857669<br>
-      📧 <a href="mailto:soneeyasubramanian@gmail.com">soneeyasubramanian@gmail.com</a><br>
-      🔗 <a href="https://www.linkedin.com/in/soneeya-s-s-951575274/">LinkedIn</a>
+      📧 <a href="mailto:soneeyasubramanian@gmail.com">soneeyasubramanian@gmail.com</a>
+      🔗 <a href="https://www.linkedin.com/in/soneeya-s-s-951575274/">LinkedIn Profile</a>
     </p>
   </header>
 
   <section class="section">
     <h2>Professional Summary</h2>
-    <p>Aspiring DevOps Engineer with experience in AWS, Linux, and automation. Strong understanding of cloud infrastructure and DevOps practices. Passionate about system reliability and scalable deployments.</p>
+    <p>Aspiring <span class="badge">DevOps Engineer</span> with experience in <span class="badge">AWS</span>, <span class="badge">Linux</span>, and automation. Strong foundation in cloud infrastructure and DevOps practices.</p>
   </section>
 
   <section class="section">
     <h2>Education</h2>
     <ul>
-      <li><span class="highlight">Bannari Amman Institute of Technology (2021 – 2025)</span> - B.Tech in IT, CGPA: 7.91</li>
-      <li><span class="highlight">SPK Matric Higher Secondary School (2021)</span> - HSC II Year, 86.6%</li>
-      <li><span class="highlight">SPK Matric Higher Secondary School (2019)</span> - SSLC, 85.6%</li>
+      <li><span class="highlight">Bannari Amman Institute of Technology</span> (2021–2025) - B.Tech IT, CGPA: 7.91</li>
+      <li><span class="highlight">SPK Matric HSS</span> (2021) - HSC, 86.6%</li>
+      <li><span class="highlight">SPK Matric HSS</span> (2019) - SSLC, 85.6%</li>
     </ul>
   </section>
 
   <section class="section">
     <h2>Technical Skills</h2>
-    <ul>
-      <li><strong>Languages:</strong> Shell Scripting, Python, C, HTML/CSS</li>
-      <li><strong>Tools:</strong> AWS, VS Code, GitHub</li>
-      <li><strong>Frameworks & Tech:</strong> Linux, Jenkins, Ansible, Maven, Docker, Kubernetes, Terraform, Grafana, Prometheus</li>
-      <li><strong>Database:</strong> MySQL</li>
-    </ul>
+    <p>
+      <span class="badge">Shell Scripting</span>
+      <span class="badge">Python</span>
+      <span class="badge">C</span>
+      <span class="badge">HTML/CSS</span>
+      <span class="badge">AWS</span>
+      <span class="badge">Linux</span>
+      <span class="badge">Docker</span>
+      <span class="badge">Kubernetes</span>
+      <span class="badge">Terraform</span>
+      <span class="badge">Grafana</span>
+      <span class="badge">Prometheus</span>
+      <span class="badge">Jenkins</span>
+      <span class="badge">Ansible</span>
+      <span class="badge">MySQL</span>
+    </p>
   </section>
 
   <section class="section">
@@ -92,8 +170,8 @@
       <li>SQL Internship - Edify Techno Solutions</li>
       <li>CSS3 & Python (Infosys Springboard)</li>
       <li>Cloud Computing - Besant Technologies</li>
-      <li><a href="https://zenodo.org/records/12770747" target="_blank">AI for Workload Management - IJRTI</a></li>
-      <li><a href="https://www.ijfmr.com/research-paper.php?id=24989" target="_blank">Resource Scheduling in Cloud Healthcare - IJFMR</a></li>
+      <li><a href="https://zenodo.org/records/12770747">AI for Workload Management - IJRTI</a></li>
+      <li><a href="https://www.ijfmr.com/research-paper.php?id=24989">Cloud-Based Healthcare Systems - IJFMR</a></li>
     </ul>
   </section>
 
@@ -101,9 +179,8 @@
     <h2>Leadership & Extracurriculars</h2>
     <ul>
       <li>Basketball - SGFI Player, School Games Federation of India</li>
-      <li>Football - Main player, Anna University Women’s Football Team</li>
+      <li>Football - Anna University Women’s Team, Main Player</li>
     </ul>
   </section>
-
 </body>
 </html>
