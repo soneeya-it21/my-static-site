@@ -7,6 +7,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
+    :root {
+      --bg-light: #f4f6f9;
+      --bg-dark: #1e1e2f;
+      --text-light: #333;
+      --text-dark: #f1f1f1;
+      --accent: #0077b6;
+      --card-bg-light: #fff;
+      --card-bg-dark: #2a2a3d;
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -15,10 +25,16 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(to right, #f8f9fa, #e9ecef);
-      color: #333;
+      background-color: var(--bg-light);
+      color: var(--text-light);
       padding: 2rem;
       line-height: 1.6;
+      transition: background 0.5s, color 0.5s;
+    }
+
+    body.dark-mode {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
     }
 
     header {
@@ -29,27 +45,30 @@
 
     header h1 {
       font-size: 2.5rem;
-      color: #2c3e50;
+      color: var(--accent);
     }
 
     .contact a {
       display: block;
-      color: #0077b6;
+      color: var(--accent);
       text-decoration: none;
       margin-top: 0.3rem;
     }
 
     .section {
       margin-bottom: 2.5rem;
+      opacity: 0;
+      transform: translateY(40px);
       animation: slideUp 1s ease forwards;
+      animation-delay: 0.3s;
     }
 
     .section h2 {
-      border-left: 5px solid #0077b6;
+      border-left: 5px solid var(--accent);
       padding-left: 1rem;
       margin-bottom: 1rem;
       font-size: 1.5rem;
-      color: #212529;
+      color: inherit;
     }
 
     .section ul {
@@ -59,10 +78,15 @@
 
     .section ul li {
       margin-bottom: 0.7rem;
-      background: #fff;
+      background: var(--card-bg-light);
       padding: 0.8rem 1rem;
       border-radius: 10px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      transition: background 0.3s;
+    }
+
+    body.dark-mode .section ul li {
+      background: var(--card-bg-dark);
     }
 
     .highlight {
@@ -71,12 +95,25 @@
 
     .badge {
       display: inline-block;
-      background-color: #0077b6;
+      background-color: var(--accent);
       color: white;
       padding: 0.3rem 0.6rem;
       margin: 0.2rem;
       border-radius: 0.5rem;
       font-size: 0.8rem;
+    }
+
+    .toggle-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: var(--accent);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      z-index: 999;
     }
 
     @keyframes fadeIn {
@@ -103,23 +140,24 @@
   </style>
 </head>
 <body>
+  <button class="toggle-btn" onclick="toggleDarkMode()"><i class="fas fa-adjust"></i> Toggle Theme</button>
   <header>
-    <h1>Soneeya S S</h1>
+    <h1><i class="fas fa-terminal"></i> Soneeya S S</h1>
     <p class="contact">
-      📍 Marathahalli, Bangalore, Karnataka<br>
-      📞 9677857669<br>
-      📧 <a href="mailto:soneeyasubramanian@gmail.com">soneeyasubramanian@gmail.com</a>
-      🔗 <a href="https://www.linkedin.com/in/soneeya-s-s-951575274/">LinkedIn Profile</a>
+      <i class="fas fa-map-marker-alt"></i> Marathahalli, Bangalore, Karnataka<br>
+      <i class="fas fa-phone"></i> 9677857669<br>
+      <i class="fas fa-envelope"></i> <a href="mailto:soneeyasubramanian@gmail.com">soneeyasubramanian@gmail.com</a><br>
+      <i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/soneeya-s-s-951575274/">LinkedIn Profile</a>
     </p>
   </header>
 
   <section class="section">
-    <h2>Professional Summary</h2>
+    <h2><i class="fas fa-user"></i> Professional Summary</h2>
     <p>Aspiring <span class="badge">DevOps Engineer</span> with experience in <span class="badge">AWS</span>, <span class="badge">Linux</span>, and automation. Strong foundation in cloud infrastructure and DevOps practices.</p>
   </section>
 
   <section class="section">
-    <h2>Education</h2>
+    <h2><i class="fas fa-graduation-cap"></i> Education</h2>
     <ul>
       <li><span class="highlight">Bannari Amman Institute of Technology</span> (2021–2025) - B.Tech IT, CGPA: 7.91</li>
       <li><span class="highlight">SPK Matric HSS</span> (2021) - HSC, 86.6%</li>
@@ -128,7 +166,7 @@
   </section>
 
   <section class="section">
-    <h2>Technical Skills</h2>
+    <h2><i class="fas fa-tools"></i> Technical Skills</h2>
     <p>
       <span class="badge">Shell Scripting</span>
       <span class="badge">Python</span>
@@ -148,7 +186,7 @@
   </section>
 
   <section class="section">
-    <h2>Projects</h2>
+    <h2><i class="fas fa-code"></i> Projects</h2>
     <ul>
       <li><strong>Email / SMS Spam Detection</strong> – Python, NLP, TensorFlow, Scikit-learn</li>
       <li><strong>Intrusion Detection</strong> – Machine Learning & Deep Learning using MATLAB, Java</li>
@@ -158,14 +196,14 @@
   </section>
 
   <section class="section">
-    <h2>Experience</h2>
+    <h2><i class="fas fa-briefcase"></i> Experience</h2>
     <ul>
       <li><strong>DevOps Intern - Elevate Labs</strong> (April 2025 - Present) – Hands-on with CI/CD, AWS, Automation</li>
     </ul>
   </section>
 
   <section class="section">
-    <h2>Certifications & Publications</h2>
+    <h2><i class="fas fa-certificate"></i> Certifications & Publications</h2>
     <ul>
       <li>SQL Internship - Edify Techno Solutions</li>
       <li>CSS3 & Python (Infosys Springboard)</li>
@@ -176,11 +214,17 @@
   </section>
 
   <section class="section">
-    <h2>Leadership & Extracurriculars</h2>
+    <h2><i class="fas fa-futbol"></i> Leadership & Extracurriculars</h2>
     <ul>
       <li>Basketball - SGFI Player, School Games Federation of India</li>
       <li>Football - Anna University Women’s Team, Main Player</li>
     </ul>
   </section>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
 </body>
 </html>
